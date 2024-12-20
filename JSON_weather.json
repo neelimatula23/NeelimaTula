@@ -1,0 +1,138 @@
+[
+    {
+        "coord": {
+            "lon": -0.1257,
+            "lat": 51.5085
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 2.54,
+            "feels_like": 0.75,
+            "temp_min": 1.06,
+            "temp_max": 3.41,
+            "pressure": 1022,
+            "humidity": 89,
+            "sea_level": 1022,
+            "grnd_level": 1018
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 1.79,
+            "deg": 304,
+            "gust": 3.58
+        },
+        "clouds": {
+            "all": 67
+        },
+        "dt": 1734671679,
+        "sys": {
+            "type": 2,
+            "id": 2075535,
+            "country": "GB",
+            "sunrise": 1734681809,
+            "sunset": 1734709979
+        },
+        "timezone": 0,
+        "id": 2643743,
+        "name": "London",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -74.006,
+            "lat": 40.7143
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 2.72,
+            "feels_like": -1.59,
+            "temp_min": 0.88,
+            "temp_max": 3.45,
+            "pressure": 1025,
+            "humidity": 60,
+            "sea_level": 1025,
+            "grnd_level": 1023
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 5.14,
+            "deg": 10
+        },
+        "clouds": {
+            "all": 0
+        },
+        "dt": 1734671581,
+        "sys": {
+            "type": 2,
+            "id": 2037026,
+            "country": "US",
+            "sunrise": 1734696981,
+            "sunset": 1734730282
+        },
+        "timezone": -18000,
+        "id": 5128581,
+        "name": "New York",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": 55.3047,
+            "lat": 25.2582
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 18.96,
+            "feels_like": 18.56,
+            "temp_min": 18.14,
+            "temp_max": 18.96,
+            "pressure": 1019,
+            "humidity": 63,
+            "sea_level": 1019,
+            "grnd_level": 1018
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 2.06,
+            "deg": 170
+        },
+        "clouds": {
+            "all": 0
+        },
+        "dt": 1734671692,
+        "sys": {
+            "type": 1,
+            "id": 7537,
+            "country": "AE",
+            "sunrise": 1734663574,
+            "sunset": 1734701600
+        },
+        "timezone": 14400,
+        "id": 292223,
+        "name": "Dubai",
+        "cod": 200
+    }
+]
