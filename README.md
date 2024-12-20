@@ -6,18 +6,18 @@ This project provides a Python-based utility to fetch weather data for specified
 
 - Fetches real-time weather data for multiple locations.
 - Saves weather data in a JSON file.
-- Converts the JSON data into a  CSV format.
+- Converts the JSON file into CSV format.
 
   Requirements
 
 - Python 
-- The following Python libraries: requests,json,csv,os
-- Google Colab environment.
+- The following Python libraries: requests,json,csv,os.
+- Pycharm.
 
-  Setup Instructions for Google Colab
+  Setup Instructions for Pycharm
 
-1. Open Google Colab : Go to Google Colab.
-2. Install Dependencies :  ensure all required libraries are installed
+1. Open Pycharm.
+2. Install Dependencies :  Ensure all required libraries are installed.
 3. Import the Script : Copy the script code into a cell in your Colab notebook and execute the cell.
 4. Set API Key : You can directly set the API_KEY variable in the script or use Colab's environment variables
    import os
