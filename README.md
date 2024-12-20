@@ -1,86 +1,78 @@
   Weather Data Fetcher
 
-This project provides a Python-based utility to fetch weather data for specified locations using the OpenWeatherMap API and save it in both JSON and CSV formats.
+This project provides a Python-based utility which fetches weather data for specified locations using the OpenWeatherMap API and save it in JSON format. It also provides functionality to parse the JSON data into a CSV file for easy analysis.
 
-   Features
+   Features:
 
 - Fetches real-time weather data for multiple locations.
 - Saves weather data in a JSON file.
 - Converts the JSON file into CSV format.
 
-  Requirements
+Requirements:
 
-- Python 
+- Python 3.12 or above.
 - The following Python libraries: requests,json,csv,os.
-- Pycharm.
+- Pip installation
+- An OpenWeatherMap API key. You can get one by signing up at [OpenWeatherMap](https://openweathermap.org/api).
 
-  Setup Instructions for Pycharm
+Configuration:
+  
+1. Set up the OpenWeatherMap API key as an environment variable named `OPENWEATHER_API_KEY`:"a7e7f5287a69c6d3ae045210b3d6bb41"
+  
+2. Modify the `LOCATIONS` variable in the script to include the cities we want to fetch weather data for:
 
-1. Open Pycharm.
-2. Install Dependencies :  Ensure all required libraries are installed.
-3. Import the Script : Copy the script code into a cell in your Colab notebook and execute the cell.
-4. Set API Key : You can directly set the API_KEY variable in the script or use Colab's environment variables
-   import os
-   os.environ["OPENWEATHER_API_KEY"] = "your_api_key_here"
-5. Run the Script : Run the script cell. The outputs, JSON_weather.json and CSV_weather.csv, will be saved in the Colab environment.
-6. Download the Files : To download the generated files to your local machine, use the following code
-    from google.colab import files
-    files.download("JSON_weather.json")
-    files.download("CSV_weather.csv")
+      LOCATIONS = ["London", "New York", "Dubai"]
+ 
+4. Specify the desired output units (`metric`, `imperial`, or `standard`) by modifying the `UNITS` variable:
 
- Configuration
+   UNITS = "metric" or "imperial" or standard
 
-You can modify the following variables in the script to customize the behavior:
-- API_KEY: Your OpenWeatherMap API key.
-- LOCATIONS: A list of cities for which weather data will be fetched.
-- UNITS: Measurement units (default: metric for Celsius).
-- JSON_FILE: Name of the JSON file for saving fetched weather data.
-- CSV_FILE: Name of the CSV file for saving parsed weather data.
+ Usage:
+ 
+1. Run the script to fetch weather data into Json file.
+2.  Now convert Json file into CSV File,excluding the weather array.
+3. Check the output files:
+   - JSON file: Contains raw weather data for all specified locations.
+   - CSV file: Contains a tabular representation of key weather data fields.
 
-   Functions
+ Output File Details:
+ 
+- `JSON_weather.json`: Stores the fetched weather data in JSON format.
+- `CSV_weather.csv`: Contains parsed weather data, including:
+  - **City**: The name of the location.
+  - **Temperature**: Current temperature in the specified units.
+  - **Humidity**: Current humidity percentage.
+  - **Weather Description**: A short description of the weather.
 
-1. fetch_weather_data(api_key, locations, units="metric", output_filename="weather_data.json")
-        - Fetches weather data for the specified locations.
-Parameters:
-* api_key: OpenWeatherMap API key.
-* locations: List of city names.
-* units: Measurement units (e.g., metric, imperial).
-* output_filename: Name of the JSON file to save the data.
-* Returns: Weather data as a Python list.
-
-2. parse_json_to_csv(input_filename, output_filename)
-       -Converts weather data from a JSON file into a CSV file.
-Parameters:
-* input_filename: Name of the JSON file with weather data.
-* output_filename: Name of the CSV file to save parsed data.
-
-   Example Output
-
-JSON File (JSON_weather.json):
+Example:
+JSON Output
+json
 [
     {
         "name": "London",
         "main": {
-            "temp": 15.5,
+            "temp": 15.0,
             "humidity": 82
         },
         "weather": [
-           {
+            {
                 "description": "light rain"
             }
         ]
     }
 ]
 
-CSV File (CSV_weather.csv):
+CSV Output:
 
 City,Temperature,Humidity,Weather Description
-London,15.5,82,light rain
-New York,18.3,65,clear sky
-India,29.4,78,scattered clouds
+London,15.0,82,light rain
 
-   Error Handling
+Notes:
 
-- If a location is not found or the API key is invalid, the script skips the location without crashing.
+- Ensure the API key is valid to avoid authentication errors.
+- Handle exceptions and errors, such as failed API requests, for production use.
 
-  Created by Neelima Tula
+
+
+
+Created by Neelimatula
